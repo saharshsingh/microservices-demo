@@ -28,6 +28,8 @@ spec:
     metadata:
       labels:
         app: emailservice
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       terminationGracePeriodSeconds: 5
       containers:
@@ -81,6 +83,8 @@ spec:
     metadata:
       labels:
         app: checkoutservice
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
         - name: server
@@ -143,6 +147,8 @@ spec:
     metadata:
       labels:
         app: recommendationservice
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       terminationGracePeriodSeconds: 5
       containers:
@@ -200,6 +206,7 @@ spec:
         app: frontend
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
         - name: server
@@ -287,6 +294,8 @@ spec:
     metadata:
       labels:
         app: paymentservice
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       terminationGracePeriodSeconds: 5
       containers:
@@ -336,6 +345,8 @@ spec:
     metadata:
       labels:
         app: productcatalogservice
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       terminationGracePeriodSeconds: 5
       containers:
@@ -388,6 +399,8 @@ spec:
     metadata:
       labels:
         app: cartservice
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       terminationGracePeriodSeconds: 5
       containers:
@@ -447,6 +460,7 @@ spec:
         app: loadgenerator
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        sidecar.istio.io/inject: "true"
     spec:
       terminationGracePeriodSeconds: 5
       restartPolicy: Always
@@ -478,6 +492,8 @@ spec:
     metadata:
       labels:
         app: currencyservice
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       terminationGracePeriodSeconds: 5
       containers:
@@ -528,6 +544,8 @@ spec:
     metadata:
       labels:
         app: shippingservice
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
       - name: server
@@ -580,6 +598,8 @@ spec:
     metadata:
       labels:
         app: redis-cart
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
       - name: redis
@@ -633,6 +653,8 @@ spec:
     metadata:
       labels:
         app: adservice
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       terminationGracePeriodSeconds: 5
       containers:
